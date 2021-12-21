@@ -317,7 +317,7 @@ def pullDataForYear(year):
 
 	os.chdir(old_cwd)
 
-def pullAll():
+def pullData():
 	data_dir = "data"
 	if not os.path.exists(data_dir):
 		zip_dir = data_dir + ".zip"
@@ -333,4 +333,5 @@ def pullAll():
 		pullDataForYear(year)
 	os.chdir(old_cwd)
 
-pullAll()
+if __name__ == "__main__":
+	pullData()
